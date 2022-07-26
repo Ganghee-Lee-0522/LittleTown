@@ -38,5 +38,10 @@ public class TruckCtrl : MonoBehaviour
         go = true;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("택배 트럭이랑 충돌");
+    }
+
 
 }
