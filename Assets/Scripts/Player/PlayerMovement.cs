@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // 플레이어 움직임 관련 변수
     public float speed = 2.0f;
     public GameObject back;
     public GameObject front;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // 움직임 관련 부분
         if(Input.GetKey(KeyCode.UpArrow))
         {
             SetInvisible();
@@ -46,11 +48,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // 플레이어 측면 이미지 전환 관련 부분
+
+    // 선택 방향 이미지가 보이게 하는 함수
     void SetVisible(GameObject image)
     {
         image.SetActive(true);
     }
 
+    // 모든 방향 이미지가 안보이게 하는 함수
     void SetInvisible()
     {
         back.SetActive(false);

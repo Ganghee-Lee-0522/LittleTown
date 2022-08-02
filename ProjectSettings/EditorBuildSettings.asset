@@ -4,32 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/LoginScene.unity
-    guid: 35b0236d77c946f468e996b1fcf81c5e
-  - enabled: 1
-    path: Assets/Scenes/MainScreen.unity
-    guid: 26aa3ab052d35524abeada7dd60800a7
-  - enabled: 1
-    path: Assets/Scenes/Seed.unity
-    guid: 7d1f78b255b614d499b9f5c0ec8ce4f7
-  - enabled: 1
-    path: Assets/Scenes/Cloth22.unity
-    guid: 05c6325070cce6444a5ae308751d3990
-  - enabled: 1
-    path: Assets/Scenes/YardScene.unity
-    guid: b868f15971549fd45a0c85a300848fc7
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
->>>>>>> Stashed changes
-=======
-  - enabled: 1
-    path: Assets/Scenes/SceneRoom_gh.unity
-    guid: 49fa99ade51ed584d89ac95e6dd968e1
->>>>>>> Stashed changes
+  m_Scenes: []
   m_configObjects: {}
