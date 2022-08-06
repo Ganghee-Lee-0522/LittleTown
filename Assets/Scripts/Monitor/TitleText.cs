@@ -15,8 +15,8 @@ public class TitleText : MonoBehaviour
     
     public void ChangeText()
     {
-        O_Title.text = C_Title.text;
-        O_Description.text = C_Description.text;
+        //O_Title.text = C_Title.text;
+        //O_Description.text = C_Description.text;
     }
 
 

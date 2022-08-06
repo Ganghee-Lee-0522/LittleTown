@@ -13,7 +13,7 @@ public class ChangeScene : MonoBehaviour
                 SceneManager.LoadScene("Cloth");
                 break;
             case "SBtn":
-                SceneManager.LoadScene("Seed");
+                SceneManager.LoadScene("SeedlingScene");
                 break;
             
         }

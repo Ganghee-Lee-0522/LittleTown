@@ -13,6 +13,8 @@ public class Display : MonoBehaviour
     public Text R_Time;//키우는 시간
     public Text R_CoinGet;//작물 판매 가격
 
+    
+
 
     public void ChangeImage()
     {
@@ -26,48 +28,56 @@ public class Display : MonoBehaviour
             R_CoinSell.text = "5";
             R_Time.text = "2";
             R_CoinGet.text = "8";
+            PocketManager.sNumber = 0;
         }
         else if (L_SeedName.text == "양배추")
         {
             R_CoinSell.text = "8";
             R_Time.text = "5";
             R_CoinGet.text = "13";
+            PocketManager.sNumber = 1;
         }
         else if (L_SeedName.text == "파")
         {
             R_CoinSell.text = "10";
             R_Time.text = "7";
             R_CoinGet.text = "16";
+            PocketManager.sNumber = 2;
         }
         else if (L_SeedName.text == "오이")
         {
             R_CoinSell.text = "11";
             R_Time.text = "8";
             R_CoinGet.text = "17";
+            PocketManager.sNumber = 3;
         }
         else if (L_SeedName.text == "가지")
         {
             R_CoinSell.text = "12";
             R_Time.text = "9";
             R_CoinGet.text = "18";
+            PocketManager.sNumber = 4;
         }
         else if (L_SeedName.text == "토마토")
         {
             R_CoinSell.text = "13";
             R_Time.text = "10";
             R_CoinGet.text = "19";
+            PocketManager.sNumber = 5;
         }
         else if (L_SeedName.text == "참외")
         {
             R_CoinSell.text = "16";
             R_Time.text = "13";
             R_CoinGet.text = "23";
+            PocketManager.sNumber = 6;
         }
         else if (L_SeedName.text == "수박")
         {
             R_CoinSell.text = "20";
             R_Time.text = "17";
             R_CoinGet.text = "35";
+            PocketManager.sNumber = 7;
         }
 
     }
