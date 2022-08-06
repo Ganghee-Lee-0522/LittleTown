@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/YardScene.unity
     guid: b868f15971549fd45a0c85a300848fc7
   - enabled: 1
-    path: Assets/Scenes/SceneRoom_gh.unity
+    path: Assets/Scenes/SceneRoom.unity
     guid: 49fa99ade51ed584d89ac95e6dd968e1
   - enabled: 1
     path: Assets/Scenes/Seed.unity
