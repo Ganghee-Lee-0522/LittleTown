@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Seed.unity
     guid: 05c6325070cce6444a5ae308751d3990
   - enabled: 1
-    path: Assets/Scenes/Cloth.unity
+    path: Assets/Scenes/past/Cloth.unity
     guid: 91c269390e299104e92bb527d515c2aa
   - enabled: 1
     path: Assets/Scenes/SeedlingScene.unity
