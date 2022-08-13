@@ -5,6 +5,8 @@ using UnityEngine;
 public class StorageCtrl : MonoBehaviour
 {
     GameObject player;
+    public GameObject popup;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +25,11 @@ public class StorageCtrl : MonoBehaviour
 
         if (d < r1 + r2)
         {
-            //Ãæµ¹½Ã
-            Debug.Log("³óÀÛ¹° ÀúÀå Ã¢°í¿¡ Ãæµ¹");
+            //ï¿½æµ¹ï¿½ï¿½
+            Debug.Log("");
             if (Input.GetKeyUp(KeyCode.Space))
             {
-
+                popup.SetActive(true);
             }
         }
     }
