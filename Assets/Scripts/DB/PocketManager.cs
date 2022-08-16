@@ -51,4 +51,8 @@ public class PocketManager : MonoBehaviour
 Åä¸¶Åä 5
 Âü¿Ü 6
 ¼ö¹Ú 7
+¿Ê1 8
+¿Ê2 9
+¿Ê3 10
+¿Ê4 11
      */
