@@ -26,11 +26,13 @@ public class StorageCtrl : MonoBehaviour
         if (d < r1 + r2)
         {
             //�浹��
+            /*
             Debug.Log("");
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 popup.SetActive(true);
             }
+            */
         }
     }
 
