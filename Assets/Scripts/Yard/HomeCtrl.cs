@@ -38,6 +38,6 @@ public class HomeCtrl : MonoBehaviour
 
     public void GoHome()
     {
-        SceneManager.LoadScene("SceneRoom_gh");
+        SceneManager.LoadScene("SceneRoom");
     }
 }
