@@ -7,40 +7,30 @@ using System.Data;
 using UnityEngine.Networking;
 
 [System.Serializable]
-public class User
+public class LoginUser
 {
     public string id;
     public string pw;
-    public string nickname;
 }
 
-public class JoinServer : MonoBehaviour
+public class LoginServer : MonoBehaviour
 {
     public Text inputID;
     public Text inputPw;
-    public Text inputCheckPw;
-    public Text inputNick;
 
-    void JoinGame()
+    void Start()
     {
-        // 비밀번호 != 비밀번호확인
-        // 작동 안됨
-        if (inputPw.GetComponent<Text>().text != inputCheckPw.GetComponent<Text>().text)
-            return;
-
-        // POST할 정보
-        User testuser = new User
+        LoginUser loginuser = new LoginUser
         {
             id = inputID.GetComponent<Text>().text,
-            pw = inputPw.GetComponent<Text>().text,
-            nickname = inputNick.GetComponent<Text>().text
+            pw = inputPw.GetComponent<Text>().text
         };
 
         // json으로 변환
-        string json = JsonUtility.ToJson(testuser);
+        string json = JsonUtility.ToJson(loginuser);
 
         // request Post
-        StartCoroutine(Upload("3.35.9.134:8080/user/join", json));
+        StartCoroutine(Upload("3.35.9.134:8080/user/login", json));
     }
 
     IEnumerator Upload(string URL, string json)
@@ -58,13 +48,17 @@ public class JoinServer : MonoBehaviour
             yield return request.SendWebRequest();
 
             // Response 시 띄울 코드 작성해야함
-            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+            if (request.isNetworkError || request.isHttpError)
             {
                 Debug.Log("Error While Sending: " + request.error);
+                
+                // 로그인 실패 시 에러 창
             }
             else
             {
                 Debug.Log("Received: " + request.downloadHandler.text);
+
+                // 로그인 성공 시 창 전환 코드
             }
         }
     }
