@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2177,7 +2177,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210761229}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80cd669e578bbc8499dbb7f136746193, type: 3}
   m_Name: 
@@ -2192,6 +2192,7 @@ MonoBehaviour:
   - {fileID: 976388185}
   - {fileID: 35365716}
   SelectedPage: {fileID: 464272532}
+  player: {fileID: 0}
 --- !u!1 &212384007
 GameObject:
   m_ObjectHideFlags: 0
@@ -12487,6 +12488,7 @@ GameObject:
   - component: {fileID: 1276046126}
   - component: {fileID: 1276046125}
   - component: {fileID: 1276046130}
+  - component: {fileID: 1276046132}
   - component: {fileID: 1276046131}
   m_Layer: 0
   m_Name: FarmStorage
@@ -12580,7 +12582,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276046124}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6de0d5397221d249af56f487a90bf07, type: 3}
   m_Name: 
@@ -12602,6 +12604,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1276046132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276046124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80cd669e578bbc8499dbb7f136746193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description_Text: {fileID: 1678936590}
+  tabDescription:
+  - "\uC57C\uCC44"
+  - "\uACFC\uC77C"
+  tf: {fileID: 987835504}
+  go: {fileID: 1771709849}
+  selectedTabImages:
+  - {fileID: 976388185}
+  - {fileID: 35365716}
+  SelectedPage: {fileID: 464272532}
+  player: {fileID: 401228403}
 --- !u!1 &1290417797
 GameObject:
   m_ObjectHideFlags: 0
