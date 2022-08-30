@@ -16,15 +16,26 @@ public class LoginUser
 }
 
 [System.Serializable]
+public class LoginData
+{
+    public int userIdx;
+    public int clothIdx;
+    public int money;
+}
+
+[System.Serializable]
 public class LoginResponse
 {
     public string status;
     public string message;
-    public string data;
+    public LoginData data;
 }
 
 public class LoginServer : MonoBehaviour
 {
+    public static int userIndex;
+    public static int clothIndex;
+    
     public Text inputID;
     public Text inputPw;
 
@@ -81,7 +92,9 @@ public class LoginServer : MonoBehaviour
             else
             {
                 Debug.Log("Received: " + request.downloadHandler.text);
-
+                userIndex = L.data.userIdx;
+                clothIndex = L.data.clothIdx;
+                DBManager.currentCoin = L.data.money;
                 // 로그인 성공 시 창 전환 코드
                 SceneManager.LoadScene("YardScene");
             }
