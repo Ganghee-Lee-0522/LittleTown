@@ -25,7 +25,7 @@ public class TruckGenerator : MonoBehaviour
         {
             this.delta = 0;
             GameObject go = Instantiate(truckPrefab) as GameObject;
-            go.transform.position = new Vector3(26.5f, 1.5f, -8.0f);
+            go.transform.position = new Vector3(26.5f, 2.0f, -8.0f);
             TruckCtrl.go = false;
             //택배차 만들어서 보낸 다음 집 앞에 머물 시간 새기 시작!
             StartCoroutine(WaitForMinute());

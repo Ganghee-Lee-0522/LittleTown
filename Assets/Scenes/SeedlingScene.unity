@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TestImage: {fileID: 372562947}
-  TestSprite: {fileID: 21300000, guid: 1b882d38109daf54ba91baabc6073273, type: 3}
+  TestSprite: {fileID: 21300000, guid: 5ff8413871823aa47b994046744d7a7a, type: 3}
   R_SeedName: {fileID: 257324437}
   L_SeedName: {fileID: 691752121}
   R_CoinSell: {fileID: 1103787048}
@@ -2065,7 +2065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TestImage: {fileID: 372562947}
-  TestSprite: {fileID: 21300000, guid: b11904af88955344082ea2be435cfe7f, type: 3}
+  TestSprite: {fileID: 21300000, guid: 64b71c92231df3647be8cb0287c4e94a, type: 3}
   R_SeedName: {fileID: 257324437}
   L_SeedName: {fileID: 2074080359}
   R_CoinSell: {fileID: 1103787048}
@@ -2449,7 +2449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TestImage: {fileID: 372562947}
-  TestSprite: {fileID: 21300000, guid: 46098afbb31ea594e8b10a0195ffb514, type: 3}
+  TestSprite: {fileID: 21300000, guid: d8e0e60fc5b145a4f9febb3ad6c6c8ef, type: 3}
   R_SeedName: {fileID: 257324437}
   L_SeedName: {fileID: 506205285}
   R_CoinSell: {fileID: 1103787048}
@@ -5148,7 +5148,7 @@ RectTransform:
   m_GameObject: {fileID: 1030009948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.27, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2100696179}
@@ -5348,7 +5348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TestImage: {fileID: 372562947}
-  TestSprite: {fileID: 21300000, guid: 78ea4b6d78f21f440b33dfbffae43f92, type: 3}
+  TestSprite: {fileID: 21300000, guid: 5553b8e3b04e7594db99b0957f1b5bc5, type: 3}
   R_SeedName: {fileID: 257324437}
   L_SeedName: {fileID: 50174774}
   R_CoinSell: {fileID: 1103787048}
@@ -5508,7 +5508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TestImage: {fileID: 372562947}
-  TestSprite: {fileID: 21300000, guid: 0e3fc5f32ba8a1c409b6d737910084a8, type: 3}
+  TestSprite: {fileID: 21300000, guid: 47a4b283b970fe5408c53e2828528b42, type: 3}
   R_SeedName: {fileID: 257324437}
   L_SeedName: {fileID: 549028374}
   R_CoinSell: {fileID: 1103787048}
@@ -6416,7 +6416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TestImage: {fileID: 372562947}
-  TestSprite: {fileID: 21300000, guid: 6695389488d299747a96b156637aaa7d, type: 3}
+  TestSprite: {fileID: 21300000, guid: 27fd8c4e45b09ce43822b3fa9ffa2968, type: 3}
   R_SeedName: {fileID: 257324437}
   L_SeedName: {fileID: 927129546}
   R_CoinSell: {fileID: 1103787048}
@@ -6766,7 +6766,7 @@ RectTransform:
   m_GameObject: {fileID: 1307564201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.27, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2100696179}
@@ -6797,7 +6797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0b715f2b100424e41a2f8dcef88b6575, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a935b98cea901654ba5fbf5a69b1ad47, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6889,7 +6889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TestImage: {fileID: 372562947}
-  TestSprite: {fileID: 21300000, guid: 69e536db7e4b95642bfb70ba52779244, type: 3}
+  TestSprite: {fileID: 21300000, guid: 30e6342dfaef8c9449da65843d2a6634, type: 3}
   R_SeedName: {fileID: 257324437}
   L_SeedName: {fileID: 1561234262}
   R_CoinSell: {fileID: 1103787048}
@@ -9920,7 +9920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TestImage: {fileID: 372562947}
-  TestSprite: {fileID: 21300000, guid: 35d719b9675e14745a8ae88b317bc616, type: 3}
+  TestSprite: {fileID: 21300000, guid: 368f8bb336712d94a81c0e511d4f3586, type: 3}
   R_SeedName: {fileID: 257324437}
   L_SeedName: {fileID: 2051661227}
   R_CoinSell: {fileID: 1103787048}
