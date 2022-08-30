@@ -23,21 +23,22 @@ public class Display : MonoBehaviour
         //함수 이름은 ChangeImage 이지만,,, 모종 가격, 키우는 시간, 작물 판매 가격 전부 할당해주자!
         R_SeedName.text = L_SeedName.text;
         
-        if(L_SeedName.text == "완두콩")
+        if(L_SeedName.text == "당근")
         {
+            Debug.Log("당근 클릭");
             R_CoinSell.text = "5";
             R_Time.text = "2";
             R_CoinGet.text = "8";
             PocketManager.sNumber = 0;
         }
-        else if (L_SeedName.text == "양배추")
+        else if (L_SeedName.text == "파프리카")
         {
             R_CoinSell.text = "8";
             R_Time.text = "5";
             R_CoinGet.text = "13";
             PocketManager.sNumber = 1;
         }
-        else if (L_SeedName.text == "파")
+        else if (L_SeedName.text == "빨간무")
         {
             R_CoinSell.text = "10";
             R_Time.text = "7";
@@ -51,7 +52,7 @@ public class Display : MonoBehaviour
             R_CoinGet.text = "17";
             PocketManager.sNumber = 3;
         }
-        else if (L_SeedName.text == "가지")
+        else if (L_SeedName.text == "옥수수")
         {
             R_CoinSell.text = "12";
             R_Time.text = "9";
