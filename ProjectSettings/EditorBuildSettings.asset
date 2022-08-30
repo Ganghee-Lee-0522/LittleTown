@@ -14,16 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneRoom.unity
     guid: 49fa99ade51ed584d89ac95e6dd968e1
-  - enabled: 0
-    path: Assets/Scenes/Seed.unity
-    guid: 05c6325070cce6444a5ae308751d3990
-  - enabled: 1
-    path: Assets/Scenes/past/Cloth.unity
-    guid: 91c269390e299104e92bb527d515c2aa
   - enabled: 1
     path: Assets/Scenes/SeedlingScene.unity
     guid: b27f1dd0cb5316541ae4dece95a2068c
-  - enabled: 0
-    path: Assets/newYardScene.unity
-    guid: eee5906fb5dbee94c96b1a7abfc86faf
+  - enabled: 1
+    path: Assets/Scenes/ClothesScene.unity
+    guid: 11cf2a93ff3f85c40946d8061402aa13
   m_configObjects: {}
