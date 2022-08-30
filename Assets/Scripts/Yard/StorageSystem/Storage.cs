@@ -36,7 +36,7 @@ public class Storage : MonoBehaviour
     private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
 
 
-    
+    public GameObject player;
 
     private int page;
     private int slotCount; // 활성화된 슬롯 개수 
@@ -269,8 +269,16 @@ public class Storage : MonoBehaviour
 
         if(!stopKeyInput)
         {   
-            
+            Vector3 p1 = transform.position;
+            Vector3 p2 = this.player.transform.position;
+            Vector3 dir = p1 - p2;
+            float d = dir.magnitude;
+            float r1 = 2.0f;
+            float r2 = 1.0f;
 
+
+            if (d < r1 + r2)
+            {
             if(Input.GetKeyDown(KeyCode.Space))              
             {
                 activated = !activated;
@@ -311,7 +319,7 @@ public class Storage : MonoBehaviour
                     
                     }
                     */
-                    if(Input.GetKeyDown(KeyCode.RightArrow))
+                    if(Input.GetKeyDown(KeyCode.D))
                     {
                         if(selectedTab < selectedTabImages.Length - 1)
                             selectedTab ++;
@@ -320,7 +328,7 @@ public class Storage : MonoBehaviour
                         SelectedTab();
                     }
 
-                    else if(Input.GetKeyDown(KeyCode.LeftArrow))
+                    else if(Input.GetKeyDown(KeyCode.A))
                     {
                         if(selectedTab>0)
                             selectedTab --;
@@ -349,7 +357,7 @@ public class Storage : MonoBehaviour
                 {
                     if(StorageTabList.Count > 0)
                     {
-                        if(Input.GetKeyDown(KeyCode.DownArrow))
+                        if(Input.GetKeyDown(KeyCode.S))
                         {
 
                             if(selectedItem + 5 > slotCount)  // 페이지 관리 
@@ -374,7 +382,7 @@ public class Storage : MonoBehaviour
                             SelectedItem();
                         }
                         
-                        else if(Input.GetKeyDown(KeyCode.UpArrow))
+                        else if(Input.GetKeyDown(KeyCode.W))
                         {
 
                             if(selectedItem - 5 > 0)  // 페이지 관리 
@@ -400,7 +408,7 @@ public class Storage : MonoBehaviour
                         }
 
 
-                        else if(Input.GetKeyDown(KeyCode.RightArrow))
+                        else if(Input.GetKeyDown(KeyCode.D))
                         {
 
                         if(selectedItem + 1 > slotCount)  // 페이지 관리 
@@ -423,7 +431,7 @@ public class Storage : MonoBehaviour
 
 
 
-                        else if(Input.GetKeyDown(KeyCode.LeftArrow))
+                        else if(Input.GetKeyDown(KeyCode.A))
                         {
                         if(selectedItem - 1 > 0)  // 페이지 관리 
                         {
@@ -483,6 +491,7 @@ public class Storage : MonoBehaviour
         
             }
             */
+            }
         }
     }
 
