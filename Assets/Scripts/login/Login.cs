@@ -71,13 +71,17 @@ public class Login : MonoBehaviour
         loginCanvas.SetActive(true);
         registerCanvas.SetActive(false);
     }
+
+    /*
     public void JoinSucceed()
     {
         loginCanvas.SetActive(true);
         registerCanvas.SetActive(false);
     }
+    
     public void LoginSucceed()
     {
         SceneManager.LoadScene("YardScene");
     }
+    */
 }

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 using System.Data;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
+using System.IO;
 
 [System.Serializable]
 public class LoginUser
@@ -13,12 +15,24 @@ public class LoginUser
     public string pw;
 }
 
+[System.Serializable]
+public class LoginResponse
+{
+    public string status;
+    public string message;
+    public string data;
+}
+
 public class LoginServer : MonoBehaviour
 {
     public Text inputID;
     public Text inputPw;
 
-    void Start()
+    public Text errormsg;
+
+    public GameObject failCanvas;
+
+    public void LoginGame()
     {
         LoginUser loginuser = new LoginUser
         {
@@ -30,7 +44,12 @@ public class LoginServer : MonoBehaviour
         string json = JsonUtility.ToJson(loginuser);
 
         // request Post
-        StartCoroutine(Upload("3.35.9.134:8080/user/login", json));
+        StartCoroutine(Upload("http://3.35.9.134:8080/user/login", json));
+    }
+
+    void SetFail()
+    {
+        failCanvas.SetActive(false);
     }
 
     IEnumerator Upload(string URL, string json)
@@ -47,19 +66,30 @@ public class LoginServer : MonoBehaviour
 
             yield return request.SendWebRequest();
 
+            LoginResponse L = JsonUtility.FromJson<LoginResponse>(request.downloadHandler.text);
+
             // Response 시 띄울 코드 작성해야함
-            if (request.isNetworkError || request.isHttpError)
+            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError || request.isError)
             {
                 Debug.Log("Error While Sending: " + request.error);
-                
                 // 로그인 실패 시 에러 창
+                errormsg.text = L.message;
+                failCanvas.SetActive(true);
+                Invoke("SetFail", 2);
+                request.Abort();
             }
             else
             {
                 Debug.Log("Received: " + request.downloadHandler.text);
 
                 // 로그인 성공 시 창 전환 코드
+                SceneManager.LoadScene("YardScene");
             }
+
+            //request.Close();
+            request.Dispose();
         }
+
+        yield return null;
     }
 }
