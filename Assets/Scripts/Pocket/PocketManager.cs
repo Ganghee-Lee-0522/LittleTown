@@ -46,10 +46,15 @@ public class PocketManager : MonoBehaviour
 
     public void ClickItem()
     {
-        //해당 주머니 아이템의 고유번호가 7이상일 때 옷을 바꿔줌
-        if(pocketNum[pocketNumber] > 6)
+        //해당 주머니 아이템의 고유번호가 8이상(옷)일 때 옷을 바꿔줌
+        if(pocketNum[pocketNumber] > 7)
         {
             DBManager.currentCloth = pocketNum[pocketNumber];
+        }
+        //텃밭에 접근 했고, 해당 주머니 아이템의 고유번호가 7이하(작물)일 때 작물을 심음
+        if(FarmCtrl.farmOk == true && pocketNum[pocketNumber] < 8)
+        {
+            FarmCtrl.selectedSeed = pocketNum[pocketNumber];
         }
         
     }

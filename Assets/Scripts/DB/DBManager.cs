@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DBManager : MonoBehaviour
 {
-    public static int currentCoin = 100;//임시 코인값 설정, 데베 연결 후 변경
+    public static int currentCoin = 1000;//임시 코인값 설정, 데베 연결 후 변경
     public Text coin;
     public static int currentCloth = 8;
     public static int selectedSeed;
