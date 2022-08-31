@@ -77,7 +77,7 @@ public class JoinServer : MonoBehaviour
 
             yield return request.SendWebRequest();
 
-            LoginResponse L = JsonUtility.FromJson<LoginResponse>(request.downloadHandler.text);
+            CommonResponse L = JsonUtility.FromJson<CommonResponse>(request.downloadHandler.text);
 
             // Response 시 띄울 코드 작성해야함
             if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)

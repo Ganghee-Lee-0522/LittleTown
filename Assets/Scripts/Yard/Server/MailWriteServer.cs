@@ -9,58 +9,57 @@ using UnityEngine.SceneManagement;
 using System.IO;
 
 [System.Serializable]
-public class LoginUser
+public class MailForm
 {
-    public string id;
-    public string pw;
+    public int sender;
+    public string receiverName;
+    public string contents;
 }
 
-[System.Serializable]
-public class LoginData
+public class MailWriteServer : MonoBehaviour
 {
-    public int userIdx;
-    public int clothIdx;
-    public int money;
-}
+    public Text inputReceiver;
+    public Text inputContents;
 
-[System.Serializable]
-public class CommonResponse
-{
-    public string status;
-    public string message;
-    public LoginData data;
-}
+    public GameObject failCanvas;
+    public GameObject successCanvas;
+    public GameObject thisCanvas;
 
-public class LoginServer : MonoBehaviour
-{
-    public static int userIndex;
-    public static int clothIndex;
-    
-    public Text inputID;
-    public Text inputPw;
+    public GameObject holder1;
+    public GameObject holder2;
 
     public Text errormsg;
 
-    public GameObject failCanvas;
-
-    public void LoginGame()
+    public void MailWrite()
     {
-        LoginUser loginuser = new LoginUser
+        MailForm mailform = new MailForm
         {
-            id = inputID.GetComponent<Text>().text,
-            pw = inputPw.GetComponent<Text>().text
+            sender = LoginServer.userIndex,
+            receiverName = inputReceiver.GetComponent<Text>().text,
+            contents = inputContents.GetComponent<Text>().text
         };
 
+        inputReceiver.text = null;
+        inputContents.text = null;
+        holder1.SetActive(true);
+        holder2.SetActive(true);
+
         // json���� ��ȯ
-        string json = JsonUtility.ToJson(loginuser);
+        string json = JsonUtility.ToJson(mailform);
 
         // request Post
-        StartCoroutine(Upload("http://3.35.9.134:8080/user/login", json));
+        StartCoroutine(Upload("http://3.35.9.134:8080/email/write", json));
     }
 
     void SetFail()
     {
         failCanvas.SetActive(false);
+    }
+
+    void SetSuccess()
+    {
+        successCanvas.SetActive(false);
+        thisCanvas.SetActive(false);
     }
 
     IEnumerator Upload(string URL, string json)
@@ -83,7 +82,7 @@ public class LoginServer : MonoBehaviour
             if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError || request.isNetworkError)
             {
                 Debug.Log("Error While Sending: " + request.error);
-                // �α��� ���� �� ���� â
+                // ���� ���� ���� �� ���� â
                 errormsg.text = L.message;
                 failCanvas.SetActive(true);
                 Invoke("SetFail", 2);
@@ -92,11 +91,9 @@ public class LoginServer : MonoBehaviour
             else
             {
                 Debug.Log("Received: " + request.downloadHandler.text);
-                userIndex = L.data.userIdx;
-                clothIndex = L.data.clothIdx;
-                DBManager.currentCoin = L.data.money;
-                // �α��� ���� �� â ��ȯ �ڵ�
-                SceneManager.LoadScene("YardScene");
+                // ���� ���� ���� �� â ��ȯ �ڵ�
+                successCanvas.SetActive(true);
+                Invoke("SetSuccess", 2);
             }
 
             //request.Close();
