@@ -5,6 +5,8 @@ using UnityEngine.UI; //Text, Image 등의UI관련 변수 등을 사용할수 �
  
 public class Display : MonoBehaviour
 {
+    //변수 이름은 seed 이지만, 옷도 같이 함
+
     public Image TestImage; //기존에 존제하는 이미지
     public Sprite TestSprite; //바뀌어질 이미지
     public Text R_SeedName;
@@ -79,6 +81,26 @@ public class Display : MonoBehaviour
             R_Time.text = "17";
             R_CoinGet.text = "35";
             PocketManager.sNumber = 7;
+        }
+        else if (L_SeedName.text == "가난한 농부수트")
+        {
+            R_CoinSell.text = "80";
+            PocketManager.sNumber = 8;
+        }
+        else if (L_SeedName.text == "가을감자 원피스")
+        {
+            R_CoinSell.text = "95";
+            PocketManager.sNumber = 9;
+        }
+        else if (L_SeedName.text == "부유한 농부수트")
+        {
+            R_CoinSell.text = "120";
+            PocketManager.sNumber = 10;
+        }
+        else if (L_SeedName.text == "여름감자 원피스")
+        {
+            R_CoinSell.text = "150";
+            PocketManager.sNumber = 11;
         }
 
     }

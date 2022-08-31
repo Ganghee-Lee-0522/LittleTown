@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody rigid;
     Animator animator;
+    public RuntimeAnimatorController[] newController;
     public float speed = 2.0f;
 
     // Start is called before the first frame update
@@ -13,6 +14,12 @@ public class PlayerController : MonoBehaviour
     {
         this.rigid = GetComponent<Rigidbody>();
         this.animator = GetComponent<Animator>();
+        animator.runtimeAnimatorController = newController[DBManager.currentCloth - 7];
+
+    }
+    public void ChangClothes()
+    {
+        animator.runtimeAnimatorController = newController[DBManager.currentCloth - 7];
     }
 
     // Update is called once per frame

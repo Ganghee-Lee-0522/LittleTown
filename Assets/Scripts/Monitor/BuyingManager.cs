@@ -43,7 +43,7 @@ public class BuyingManager : MonoBehaviour
         //상단바 코인 변경
         coin.text = (int.Parse(coin.text) - int.Parse(coinSell.text)).ToString();
 
-        PocketManager.pocketNum[PocketManager.itemNum] = PocketManager.sNumber;//처음으로 20인 주머니에 구매한 고유번호를 넣음
+        PocketManager.pocketNum[PocketManager.itemNum] = PocketManager.sNumber;//첫번째로 고유번호가 20인 주머니에 구매한 고유번호를 넣음
         PocketManager.itemNum++;//주머니에 있는 아이템 개수 증가 시키기
 
         Debug.Log("구매 후 아이템 개수 : " + PocketManager.itemNum);

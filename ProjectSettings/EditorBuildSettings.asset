@@ -19,5 +19,5 @@ EditorBuildSettings:
     guid: b27f1dd0cb5316541ae4dece95a2068c
   - enabled: 1
     path: Assets/Scenes/ClothesScene.unity
-    guid: 11cf2a93ff3f85c40946d8061402aa13
+    guid: 78b50a3ce3838904b9d9dab7f2ce242f
   m_configObjects: {}

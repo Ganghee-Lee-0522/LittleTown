@@ -17,25 +17,25 @@ public class ClothDisplay : MonoBehaviour
 
         R_ClothName.text = L_ClothName.text;
 
-        if (L_ClothName.text == "옷1")
+        if (L_ClothName.text == "가난한 농부수트")
         {
-            R_CoinSell.text = "5";
+            R_CoinSell.text = "80";
             PocketManager.sNumber = 8;
         }
-        else if (L_ClothName.text == "옷2")
+        else if (L_ClothName.text == "가을감자 원피스")
         {
-            R_CoinSell.text = "8";
+            R_CoinSell.text = "95";
             PocketManager.sNumber = 9;
         }
-        else if (L_ClothName.text == "옷3")
+        else if (L_ClothName.text == "부유한 농부수트")
         {
-            R_CoinSell.text = "10";
+            R_CoinSell.text = "120";
             PocketManager.sNumber = 10;
         }
-        else if (L_ClothName.text == "옷4")
+        else if (L_ClothName.text == "여름감자 원피스")
         {
-            R_CoinSell.text = "11";
-            PocketManager.sNumber = 1;
+            R_CoinSell.text = "150";
+            PocketManager.sNumber = 11;
         }
         
 
