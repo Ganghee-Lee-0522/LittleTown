@@ -96,7 +96,9 @@ public class LoginServer : MonoBehaviour
                 clothIndex = L.data.clothIdx;
                 DBManager.currentCoin = L.data.money;
                 // �α��� ���� �� â ��ȯ �ڵ�
-                SceneManager.LoadScene("YardScene");
+                SceneManager.LoadScene("SceneRoom");
+                //시연을 위한 코인 조작 코드
+                DBManager.currentCoin = 200;
             }
 
             //request.Close();
