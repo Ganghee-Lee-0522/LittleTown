@@ -1,9 +1,8 @@
-# LittleTown
-유니티 프로젝트
+# 🏡 LittleTown ![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white)![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
 
 지친 직장인들을 위한 농촌 간접 체험 힐링 게임
 
-## LittleTowner
+## 🌳 LittleTowner
 |역할|이름|
 |:------:|:---:|
 |Client, 기획|[박시원](https://github.com/tldnjs324)(L)|
@@ -12,7 +11,7 @@
 |Server|[최다연](https://github.com/dayeondayeon)|
 |Design|[김경진](https://github.com/Mygoaloom)|
 
-## 시연 영상
+## 🌳 시연 영상
 * 로그인, 회원가입
 
 
